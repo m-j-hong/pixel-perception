@@ -7,16 +7,47 @@
 </head>
 <body>
   <div id="controls">
-    <button id="camMode">camera mode</button>
-    <button id="fileMode">file mode</button>
+      <div id="modes">
+      <button id="camMode" class="mode-btn" class="active">camera</button>
 
-    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
-    <input type="range" id="gridSize" min="5" max="200" value="40" />
+      <label for="fileInput" id="fileModeBtn" class="mode-btn">upload image</label>
+      <input type="file" id="fileInput" accept="image/*" style="display:none"/>
+  </div>
+    <label>
+      number of pixels
+      <input type="range" id="gridSize" min="5" max="300" value="80" />
+    </label>
+
+    <!-- shape size slider -->
+    <label>
+      pixel size
+      <input type="range" id="shapeSize" min="0.5" max="3" step="0.05" value="2" />
+    </label>
+
+    <!-- shape selector -->
+    <label>
+      pixel shape
+      <select id="shapeSelect" class="button">
+        <option value="square">Squares</option>
+        <option value="circle">Circles</option>
+        <option value="diamond">Diamonds</option>
+      </select>
+    </label>
+
+
+
+    <!-- monocolor -->
+    <label>
+      <input type="checkbox" id="monoToggle" />
+      monocolor pixels
+      <input type="color" id="monoColor" value="#000000" style="display:none;" />
+    </label>
+
   </div>
 
-  <!-- hidden live video element -->
   <video id="video" autoplay playsinline style="display:none;"></video>
 
+  
   <div id="canvasWrap">
     <canvas id="output"></canvas>
   </div>
