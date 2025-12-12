@@ -28,3 +28,7 @@ canvas {
   border: 1px solid #ccc;
   object-fit: contain;
 }
+
+button {
+  padding: 6px 12px;
+}

@@ -2,13 +2,24 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>pixel squares</title>
+  <title>pixel squares live</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <input type="file" id="fileInput" accept="image/*" />
-  <input type="range" id="gridSize" min="5" max="200" value="40" />
-  <canvas id="output"></canvas>
+  <div id="controls">
+    <button id="camMode">camera mode</button>
+    <button id="fileMode">file mode</button>
+
+    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
+    <input type="range" id="gridSize" min="5" max="200" value="40" />
+  </div>
+
+  <!-- hidden live video element -->
+  <video id="video" autoplay playsinline style="display:none;"></video>
+
+  <div id="canvasWrap">
+    <canvas id="output"></canvas>
+  </div>
 
   <script src="script.js"></script>
 </body>
