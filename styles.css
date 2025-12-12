@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  background: #fafafa;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#controls {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  background: #eee;
+}
+
+#canvasWrap {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid #ccc;
+  object-fit: contain;
+}
